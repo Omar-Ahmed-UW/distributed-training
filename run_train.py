@@ -120,8 +120,8 @@ def get_dataloader_from_data_stage(
         ###########################################################################################################
         # This can be replaced with your own tokenized data generator
         ###########################################################################################################
-        data_folder = "/scratch/oa2451/prog-assignment-1/extracted_climate_text_dataset"
-        split_state_path = "/scratch/oa2451/prog-assignment-1/climate-optimized-Llama-3B/split_state.pkl"
+        data_folder = "./extracted_climate_text_dataset"
+        split_state_path = "./split_state.pkl"
         tokenizer_path = trainer.config.tokenizer.tokenizer_name_or_path # Use tokenizer from main config
 
         log_rank(f"Loading metadata from {split_state_path} relative to {data_folder}", logger=logger, level=logging.INFO, rank=0)
